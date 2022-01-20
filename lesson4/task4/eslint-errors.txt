@@ -1,5 +1,6 @@
-consistent-return
 no-var
 prettier/prettier
 eqeqeq
 no-undef
+no-plusplus
+no-return-assign
