@@ -1,5 +1,5 @@
 let sum = 0;
-for (let i = 0; i <= 10; i += 1) {
+for (let i = 0; i <= 1000; i += 1) {
   if (i % 2 !== 0) {
     console.log("Found");
     sum += i;
