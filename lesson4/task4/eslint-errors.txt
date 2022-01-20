@@ -1,0 +1,5 @@
+consistent-return
+no-var
+prettier/prettier
+eqeqeq
+no-undef
