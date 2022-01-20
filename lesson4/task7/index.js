@@ -6,6 +6,6 @@ for (let i = 0; i <= 1000; i += 1) {
   }
 }
 if (sum * 5 > 5000) {
-  console.log("Bigger");
+  console.log('Bigger');
 }
-console.log("Smaller or equal");
+console.log('Smaller or equal');
