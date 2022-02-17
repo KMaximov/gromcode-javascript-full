@@ -1,9 +1,9 @@
-import {calc} from './calculator.js'
+import { calc } from "./calculator.js";
 
 it("should get sum", () => {
-  const result = calc('2 + 3');
+  const result = calc("2 + 3");
 
-  expect(result).toEqual('2 + 3 = 5');
+  expect(result).toEqual("2 + 3 = 5");
 });
 
 it("should get subtraction", () => {

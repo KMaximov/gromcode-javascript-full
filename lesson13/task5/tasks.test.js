@@ -41,7 +41,7 @@ it("should get Ann balance", () => {
   expect(result).toEqual(900);
 });
 
-//test for adults
+// test for adults
 
 it("should get adults > 17", () => {
   const result = getAdults({ "John Doe": 19, Tom: 17, Bob: 18 });

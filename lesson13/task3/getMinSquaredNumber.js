@@ -11,6 +11,6 @@ export const minSquaredNumber = (arr) => {
   if (!Array.isArray(arr) || arr.length === 0) {
     return null;
   }
-  const squaredNumbers = arr.map((num) => Math.pow(num, 2));
+  const squaredNumbers = arr.map((num) => num ** 2);
   return Math.min(...squaredNumbers);
 };
