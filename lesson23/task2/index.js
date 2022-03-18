@@ -41,9 +41,10 @@ const renderArena = () => {
     >${linesString}</div>
     `)
     .join('');
+    arenaElem.innerHTML = sectorsString;
 };  
 
-arenaElem.innerHTML = sectorsString;
+
 // arenaElem.append = sectorsString;
 
 const onSeatSelect = event => {
