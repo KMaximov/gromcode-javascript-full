@@ -37,7 +37,7 @@ const renderArena = () => {
     <div 
         class="sector" 
         data-sector-number="${sectorNumber}"
-    >${linesString()}</div>
+    >${linesString}</div>
     `).join('');
 
     arenaElem.innerHTML = sectorsString;
