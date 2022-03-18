@@ -7,14 +7,14 @@ const generateNumbersRange = (from, to) => { // робимо новий маси
     return result;
 }
 
-const getLineSeats = () => generateNumbersRange(1, 10) // беремо потрібну к-сть ліній
-    ////циклом меп ідемо від 1 до 10, генеруємо лінію та заповняємо сидіннями
+const getLineSeats = () => generateNumbersRange(1, 10) // беремо потрібну к-сть ліній та циклом меп ідемо від 1 до 10, генеруємо лінію та заповняємо сидіннями   
     .map(seatNumber => ` 
     <div 
         class="sector__seat" 
         data-seat-number="${seatNumber}"
     ></div>
-    `).join(''); // склеюємо сидіння
+    `)
+    .join(''); // склеюємо сидіння
 
 const getSectorLines = () => {
    const seatsString = getLineSeats();
@@ -25,7 +25,8 @@ const getSectorLines = () => {
         class="sector__line" 
         data-line-number="${lineNumber}"
     >${seatsString}</div>
-    `).join(''); // склеюємо сидіння
+    `)
+    .join(''); // склеюємо сидіння
 }
 
 const arenaElem = document.querySelector('.arena');
@@ -38,11 +39,12 @@ const renderArena = () => {
         class="sector" 
         data-sector-number="${sectorNumber}"
     >${linesString}</div>
-    `).join('');
+    `)
+    .join('');
+};  
 
-    arenaElem.innerHTML = sectorsString;
-    // arenaElem.append = sectorsString;
-};
+arenaElem.innerHTML = sectorsString;
+// arenaElem.append = sectorsString;
 
 const onSeatSelect = event => {
     const isSeat = event.target.classList.contains('sector__seat'); // перевіряємо чи є такий класс в сидінні
