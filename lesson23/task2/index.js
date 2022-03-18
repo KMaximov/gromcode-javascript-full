@@ -53,9 +53,9 @@ const onSeatSelect = event => {
 
     const seatNumber = event.target.dataset.seatNumber;
     const lineNumber = event.target.closest('.sector__line').dataset.lineNumber; // знаходимо найближчу лінію
-    const sectorNumber = event.target.closest('.sector').dataset.sectorNumber; // сектор  
-    const selectedSeatElem = document.querySelector('.board__selected');
-   return selectedSeatElem.textContent = `S ${sectorNumber} - L ${lineNumber} - S ${seatNumber}`;
+    const sectorNumber = event.target.closest('.sector').dataset.sectorNumber; // сектор     
+    const selectedSeatElem = document.querySelector('.board__selected-seat');
+    selectedSeatElem.textContent = `S ${sectorNumber} - L ${lineNumber} - S ${seatNumber}`;
 };
 
 arenaElem.addEventListener('click', onSeatSelect);
