@@ -59,4 +59,3 @@ const onSeatSelect = event => {
 };
 
 arenaElem.addEventListener('click', onSeatSelect);
-renderArena();
