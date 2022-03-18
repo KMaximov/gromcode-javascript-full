@@ -55,7 +55,7 @@ const onSeatSelect = event => {
     const lineNumber = event.target.closest('.sector__line').dataset.lineNumber; // знаходимо найближчу лінію
     const sectorNumber = event.target.closest('.sector').dataset.sectorNumber; // сектор  
     const selectedSeatElem = document.querySelector('.board__selected');
-    selectedSeatElem.textContent = `S ${sectorNumber} - L ${lineNumber} - S ${seatNumber}`;
+   return selectedSeatElem.textContent = `S ${sectorNumber} - L ${lineNumber} - S ${seatNumber}`;
 };
 
 arenaElem.addEventListener('click', onSeatSelect);
