@@ -11,12 +11,12 @@ export const createTask = () => {
 
   const newTask = { text: text, done: false, id: Math.random().toString() };
 
-  const newTaskList = getItem('tasksList');
+  const tasksList = getItem('tasksList');
 
-  if (!newTaskList) {
+  if (!tasksList) {
     setItem('tasksList', [newTask]);
   } else {
-    setItem('tasksList', [...newTaskList, newTask]);
+    setItem('tasksList', [...tasksList, newTask]);
   }
 
   inputElem.value = '';
