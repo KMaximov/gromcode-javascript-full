@@ -5,13 +5,13 @@ const listElem = document.querySelector('.list');
 export const renderTasks = () => {
   listElem.innerHTML = '';
 
-  const tasksList = getItem('tasksList');
+  const taskList = getItem('tasksList');
 
-  if (!tasksList) {
+  if (!taskList) {
     return;
   }
 
-  const tasksElems = tasksList
+  const tasksElems = taskList
     .sort((a, b) => a.done - b.done)
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement('li');
