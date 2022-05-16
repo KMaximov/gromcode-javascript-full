@@ -12,9 +12,9 @@ const userRegisterBtn = document.querySelector('.submit-button');
 //     }
 // };
 
-// createUserForm.addEventListener('input', checkValid); можна через input подію, тільки при першій валідації поля переходить на наступне
+// createUserForm.addEventListener('input', checkValid); можна через change подію, тільки кнопка буде активна після втрати фокуса
 
-createUserForm.addEventListener('change', () => {
+createUserForm.addEventListener('input', () => {
     if (createUserForm.reportValidity()) {
         userRegisterBtn.disabled = false;
     }

@@ -2,9 +2,11 @@
   "trailingComma": "all",
   "printWidth": 100,
   "semi": true,
-  "singleQuote": true,
   "bracketSpacing": true,
   "arrowParens": "avoid",
   "singleQuote": true, 
-  "parser": "flow"
+  "parser": "flow",
+  "endOfLine": "auto",
+  "useTabs": false,
+  "tabWidth": 4
 }
