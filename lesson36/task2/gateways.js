@@ -8,7 +8,7 @@
 //         }) // promise
 //         // .then(result => console.log(result));
 // };
-// export const fetchRepositories = url => 
+// export const fetchRepositories = url =>
 //     fetch(url)
 //         .then(response => {
 //             if(response.ok) {

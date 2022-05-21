@@ -8,17 +8,26 @@ const userRegisterBtn = document.querySelector('.submit-button');
 
 // const checkValid = () => {
 //     if (createUserForm.reportValidity()) {
-//         userRegister.disabled = false;
+//         userRegisterBtn.disabled = false;
 //     }
 // };
 
-// createUserForm.addEventListener('input', checkValid); можна через change подію, тільки кнопка буде активна після втрати фокуса
-
-createUserForm.addEventListener('input', () => {
-    if (createUserForm.reportValidity()) {
-        userRegisterBtn.disabled = false;
+const checkValid = () => {
+    const isValidForm = createUserForm.reportValidity();
+    if (isValidForm) {
+        userRegisterBtn.removeAttribute('disabled');
+    } else {
+        userRegisterBtn.setAttribute('disabled', true);
     }
-});
+};
+
+createUserForm.addEventListener('input', checkValid); // можна через change подію, тільки кнопка буде активна після втрати фокуса
+
+// createUserForm.addEventListener('input', () => {
+//     if (createUserForm.reportValidity()) {
+//         userRegisterBtn.disabled = false;
+//     }
+// });
 
 const newUser = userData => {
     return fetch('https://627a4e1373bad50685866f2c.mockapi.io/api/v1/userForm', {
@@ -47,9 +56,9 @@ const registerNewUser = event => {
             userPassword.value = '';
             userEmail.value = '';
         })
-        .then(() => {
-            userRegisterBtn.disabled = true;
-        });
+        // .then(() => {
+        //     userRegisterBtn.disabled = true;
+        // });
 };
 
 userRegisterBtn.addEventListener('click', registerNewUser);
